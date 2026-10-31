@@ -1,0 +1,231 @@
+<svg viewBox="0 0 800 700" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Onça em chamas — mascote da Chapa Quente">
+  <defs>
+    <!-- Flame gradient: yellow → orange → deep red -->
+    <linearGradient id="flame" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%"  stop-color="#F2A900"/>
+      <stop offset="40%" stop-color="#E65B19"/>
+      <stop offset="75%" stop-color="#C62828"/>
+      <stop offset="100%" stop-color="#8B1717"/>
+    </linearGradient>
+
+    <!-- Body / fur gradient: dark red base shifting to warm amber highlights -->
+    <radialGradient id="fur" cx="40%" cy="55%" r="75%">
+      <stop offset="0%"  stop-color="#3a1410"/>
+      <stop offset="55%" stop-color="#1d0c08"/>
+      <stop offset="100%" stop-color="#0B0909"/>
+    </radialGradient>
+
+    <!-- Glow behind the head -->
+    <radialGradient id="halo" cx="50%" cy="45%" r="55%">
+      <stop offset="0%"  stop-color="#E65B19" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#C62828" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#0B0909" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Soft ember glow filter -->
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background halo -->
+  <circle cx="400" cy="300" r="300" fill="url(#halo)"/>
+
+  <!-- ============ ROSETTE SPOTS (jaguar markings) ============ -->
+  <g fill="none" stroke="#C62828" stroke-width="3" opacity="0.55">
+    <ellipse cx="250" cy="430" rx="26" ry="22"/>
+    <circle  cx="252" cy="430" r="8" fill="#C62828" opacity="0.5"/>
+    <ellipse cx="320" cy="470" rx="22" ry="18"/>
+    <circle  cx="320" cy="470" r="6" fill="#C62828" opacity="0.5"/>
+    <ellipse cx="185" cy="475" rx="24" ry="20"/>
+    <circle  cx="186" cy="475" r="7" fill="#C62828" opacity="0.5"/>
+    <ellipse cx="390" cy="440" rx="20" ry="16"/>
+    <ellipse cx="140" cy="420" rx="18" ry="14"/>
+    <ellipse cx="290" cy="525" rx="20" ry="16"/>
+    <circle  cx="290" cy="525" r="6" fill="#C62828" opacity="0.5"/>
+  </g>
+  <g fill="#8B1717" opacity="0.45">
+    <circle cx="225" cy="380" r="5"/>
+    <circle cx="360" cy="395" r="5"/>
+    <circle cx="160" cy="445" r="5"/>
+    <circle cx="330" cy="425" r="4"/>
+    <circle cx="270" cy="500" r="4"/>
+  </g>
+
+  <!-- ============ BODY ============ -->
+  <g>
+    <!-- Torso -->
+    <path d="M150 380
+             C150 330 210 295 300 285
+             C390 278 500 285 580 320
+             C625 345 640 400 625 455
+             C605 520 530 560 430 565
+             C320 570 210 555 160 490
+             C135 455 140 415 150 380 Z"
+          fill="url(#fur)" stroke="#E65B19" stroke-width="2.5" opacity="0.96"/>
+  </g>
+
+  <!-- ============ HEAD ============ -->
+  <g>
+    <!-- Ears -->
+    <path d="M310 150 L285 95 L355 135 Z" fill="#1d0c08" stroke="#C62828" stroke-width="2.5"/>
+    <path d="M480 150 L510 92 L435 135 Z" fill="#1d0c08" stroke="#C62828" stroke-width="2.5"/>
+    <path d="M314 148 L297 112 L343 138 Z" fill="#8B1717" opacity="0.7"/>
+    <path d="M476 148 L497 110 L447 138 Z" fill="#8B1717" opacity="0.7"/>
+
+    <!-- Skull -->
+    <path d="M300 160
+             C300 110 360 78 398 80
+             C438 82 500 112 498 165
+             C496 215 470 245 400 247
+             C330 249 302 215 300 160 Z"
+          fill="url(#fur)" stroke="#E65B19" stroke-width="2.5"/>
+
+    <!-- Cheek fluff / mane suggestion -->
+    <path d="M295 210 C270 205 255 230 250 255 C248 275 265 280 285 262 Z" fill="#1d0c08" stroke="#8B1717" stroke-width="1.5"/>
+    <path d="M505 210 C530 205 545 230 550 255 C552 275 535 280 515 262 Z" fill="#1d0c08" stroke="#8B1717" stroke-width="1.5"/>
+
+    <!-- Eye sockets glow -->
+    <ellipse cx="355" cy="170" rx="34" ry="26" fill="#E65B19" opacity="0.25" filter="url(#soft)"/>
+    <ellipse cx="442" cy="170" rx="34" ry="26" fill="#E65B19" opacity="0.25" filter="url(#soft)"/>
+
+    <!-- Eyes — fierce, glowing -->
+    <ellipse cx="355" cy="170" rx="23" ry="17" fill="#F2A900"/>
+    <ellipse cx="442" cy="170" rx="23" ry="17" fill="#F2A900"/>
+    <ellipse cx="355" cy="170" rx="20" ry="14" fill="#E65B19"/>
+    <ellipse cx="442" cy="170" rx="20" ry="14" fill="#E65B19"/>
+    <!-- Pupils -->
+    <ellipse cx="355" cy="171" rx="6" ry="13" fill="#0B0909"/>
+    <ellipse cx="442" cy="171" rx="6" ry="13" fill="#0B0909"/>
+    <!-- Catchlights -->
+    <circle cx="350" cy="165" r="3" fill="#fff" opacity="0.85"/>
+    <circle cx="437" cy="165" r="3" fill="#fff" opacity="0.85"/>
+
+    <!-- Brow ridges — aggressive -->
+    <path d="M320 145 C335 135 375 134 390 148" fill="none" stroke="#8B1717" stroke-width="4" stroke-linecap="round"/>
+    <path d="M478 145 C463 135 423 134 408 148" fill="none" stroke="#8B1717" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- Snout -->
+    <path d="M360 195 C360 185 390 178 398 179 C408 180 438 186 438 196 C438 210 420 220 398 221 C376 222 360 212 360 196 Z"
+          fill="#2a100a" stroke="#C62828" stroke-width="1.5"/>
+
+    <!-- Nose -->
+    <path d="M385 200 C385 191 412 191 412 200 C412 210 398 213 398 213 C398 213 385 210 385 200 Z"
+          fill="#0B0909" stroke="#E65B19" stroke-width="1.5"/>
+
+    <!-- Mouth — subtle snarl -->
+    <path d="M398 215 C398 224 388 232 378 229" fill="none" stroke="#0B0909" stroke-width="3" stroke-linecap="round"/>
+    <path d="M398 215 C398 224 408 232 418 229" fill="none" stroke="#0B0909" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Fang hints -->
+    <path d="M383 220 L385 230 L389 221 Z" fill="#f5e9d0" opacity="0.8"/>
+    <path d="M413 221 L411 230 L407 220 Z" fill="#f5e9d0" opacity="0.8"/>
+
+    <!-- Whisker hints -->
+    <path d="M340 200 C320 202 308 200 300 196" fill="none" stroke="#8B1717" stroke-width="1.5" opacity="0.6"/>
+    <path d="M340 207 C318 210 306 210 298 208" fill="none" stroke="#8B1717" stroke-width="1.5" opacity="0.6"/>
+    <path d="M458 200 C478 202 490 200 498 196" fill="none" stroke="#8B1717" stroke-width="1.5" opacity="0.6"/>
+    <path d="M458 207 C480 210 492 210 500 208" fill="none" stroke="#8B1717" stroke-width="1.5" opacity="0.6"/>
+  </g>
+
+  <!-- ============ FLAMES — erupting from the body ============ -->
+  <g filter="url(#soft)">
+    <!-- Crown of flames above head -->
+    <path d="M398 80
+             C370 50 360 15 392 0
+             C408 28 416 8 404 40
+             C430 20 444 5 452 0
+             C448 25 432 38 422 48
+             C450 32 468 18 476 12
+             C470 42 448 55 436 62
+             C462 52 484 48 500 48
+             C488 68 458 75 444 80
+             C470 78 492 82 510 90
+             C488 98 458 95 442 90
+             C468 100 486 112 500 122
+             C476 126 446 118 428 108
+             C452 122 466 138 476 152
+             C452 152 424 142 410 130
+             C432 148 444 168 450 186
+             C424 180 404 162 396 142
+             C388 162 368 180 344 186
+             C352 168 364 148 386 130
+             C372 142 344 152 320 152
+             C330 138 348 122 372 108
+             C354 118 324 126 300 122
+             C314 112 332 100 358 90
+             C342 95 312 98 290 90
+             C308 82 330 78 356 80
+             C342 75 320 68 316 48
+             C332 48 354 52 380 62
+             C368 55 348 42 344 12
+             C352 18 370 32 398 80 Z"
+          fill="url(#flame)" opacity="0.95"/>
+
+    <!-- Shoulder flames -->
+    <path d="M210 300
+             C190 280 175 255 195 235
+             C205 252 215 245 205 270
+             C222 252 238 240 250 235
+             C246 258 232 270 222 280
+             C238 272 255 268 268 270
+             C258 285 240 293 225 298
+             C242 295 258 298 270 305
+             C252 312 230 313 215 308
+             C230 315 245 325 255 338
+             C238 340 218 332 205 322
+             C218 332 230 348 235 362
+             C218 360 200 348 192 332
+             C198 318 202 308 210 300 Z"
+          fill="url(#flame)" opacity="0.85"/>
+
+    <!-- Tail flame -->
+    <path d="M580 440
+             C605 420 625 395 615 372
+             C605 390 595 380 608 360
+             C622 340 635 318 622 300
+             C612 320 602 315 612 295
+             C624 275 632 255 618 240
+             C608 258 598 252 608 235
+             C618 215 622 192 605 178
+             C598 198 590 192 598 175
+             C606 155 608 130 588 118
+             C580 140 572 138 578 120
+             C584 98 582 75 560 68
+             C552 90 544 88 550 70
+             C556 50 552 28 530 22
+             C524 45 516 44 522 26
+             C528 8 522 0 505 0
+             C498 20 490 18 496 2
+             C502 14 512 18 520 30
+             C528 50 526 72 514 95
+             C506 115 500 140 506 165
+             C512 190 530 215 545 245
+             C560 275 575 305 580 340
+             C583 375 583 410 580 440 Z"
+          fill="url(#flame)" opacity="0.9"/>
+  </g>
+
+  <!-- ============ EMBERS (small floating sparks) ============ -->
+  <g fill="#F2A900" opacity="0.85">
+    <circle cx="120" cy="180" r="3"/>
+    <circle cx="680" cy="220" r="2.5"/>
+    <circle cx="650" cy="520" r="3"/>
+    <circle cx="90"  cy="560" r="2"/>
+    <circle cx="720" cy="380" r="2.5"/>
+    <circle cx="60"  cy="350" r="2"/>
+    <circle cx="730" cy="150" r="2"/>
+  </g>
+  <g fill="#E65B19" opacity="0.7">
+    <circle cx="170" cy="100" r="2"/>
+    <circle cx="620" cy="100" r="2.5"/>
+    <circle cx="50"  cy="620" r="2"/>
+    <circle cx="750" cy="600" r="2"/>
+    <circle cx="200" cy="640" r="2.5"/>
+    <circle cx="600" cy="650" r="2"/>
+  </g>
+</svg>
