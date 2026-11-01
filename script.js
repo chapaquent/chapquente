@@ -13,8 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
      Partículas pequenas que sobem lentamente, com brilho e fade.
      Performance: usa requestAnimationFrame e reutiliza partículas.
      ================================================================ */
-  const canvas = document.getElementById("bg-embers");
-  const ctx = canvas.getContext("2d");
+ const canvas = document.getElementById("bg-embers");
+ 
+  if (!canvas) return;
+ 
+ const ctx = canvas.getContext("2d");
 
   let W, H, particles, dpr;
 
@@ -115,7 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
       resize();
       criarParticulas();
     }, 200);
-  });
+   });
 
 
   /* ================================================================
@@ -151,8 +154,9 @@ document.addEventListener("DOMContentLoaded", () => {
      3. MENU MOBILE
      ================================================================ */
   const toggle = document.getElementById("navToggle");
-  const menu = document.getElementById("navMenu");
+const menu = document.getElementById("navMenu");
 
+if (toggle && menu) {
   toggle.addEventListener("click", () => {
     const isOpen = menu.classList.toggle("open");
     toggle.classList.toggle("open", isOpen);
@@ -160,7 +164,6 @@ document.addEventListener("DOMContentLoaded", () => {
     toggle.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
   });
 
-  // Fecha menu ao clicar em um link
   menu.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
       menu.classList.remove("open");
@@ -168,15 +171,19 @@ document.addEventListener("DOMContentLoaded", () => {
       toggle.setAttribute("aria-expanded", "false");
     });
   });
+}
 
 
   /* ================================================================
      4. SOMBRA DO NAV AO ROLAR
      ================================================================ */
   const nav = document.querySelector(".nav");
+
+   if (nav) {
   window.addEventListener("scroll", () => {
     nav.classList.toggle("scrolled", window.scrollY > 40);
   });
+}
 
 
   /* ================================================================
